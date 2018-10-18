@@ -4,7 +4,9 @@ MAINTAINER The CentOS Project <cloud-ops@centos.org>
 
 # Commands
 RUN yum -y update
-RUN yum -y install httpd php php-mysql php-xml php-gd php-bcmath php-mbstring zlib ImageMagick
+RUN yum -y install epel-release
+RUN rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
+RUN yum -y install httpd mod_php72w.x86_64 php72w-bcmath.x86_64 php72w-gd.x86_64 php72w-mysql.x86_64 php72w-xml.x86_64 zlib ImageMagick
 RUN yum clean all
 RUN chkconfig httpd off
 
