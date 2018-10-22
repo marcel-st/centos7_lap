@@ -1,4 +1,4 @@
-# Download base image Centos 6 latest
+# Download base image Centos 7 latest
 FROM centos:7
 MAINTAINER The CentOS Project <cloud-ops@centos.org>
 
