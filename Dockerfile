@@ -18,6 +18,7 @@ VOLUME ["/var/www/html"]
 EXPOSE 80
 
 # Service
+ADD php.ini /etc/php7/php.ini
 ADD run-httpd.sh /run-httpd.sh
 RUN chmod -v +x /run-httpd.sh
 CMD ["/run-httpd.sh"]
